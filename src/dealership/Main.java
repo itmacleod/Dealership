@@ -16,7 +16,7 @@ public class Main {
 		if(response.equalsIgnoreCase("n")) {
 			System.out.println("Have a good day!");
 		}else {
-			Customer customer1 = new Customer("John", "123 New String Rd");
+			Customer customer1 = new Customer("John", "123 New String Rd", false);
 			Employee employee = new Employee("Eric");
 			System.out.println("How much money do you have to spend? ");
 			int money = scan.nextInt();
@@ -28,15 +28,15 @@ public class Main {
 			if(response2.equalsIgnoreCase("tesla")) {
 				Vehicle vehicle = new Vehicle("Tesla", "Model S", 2019, 90000);
 				System.out.println("The Tesla Model S, a good choice!");
-				employee.ringCustomerUp(vehicle, customer1.getBudget());
+				employee.handleCustomer(customer1, customer1.getFinance(), vehicle);
 			}else if(response2.equalsIgnoreCase("jeep")) {
 				Vehicle vehicle = new Vehicle("Jeep", "Wrangler", 2010, 50000);
 				System.out.println("The Jeep Wrangler, great for offroading!");
-				employee.ringCustomerUp(vehicle, customer1.getBudget());
+				employee.handleCustomer(customer1, customer1.getFinance(), vehicle);
 			}else if(response2.equalsIgnoreCase("Honda")) {
 				Vehicle vehicle = new Vehicle("Honda", "Civic", 2011, 30000);
 				System.out.println("The Honda Civic, a trusty car!");
-				employee.ringCustomerUp(vehicle, customer1.getBudget());
+				employee.handleCustomer(customer1, customer1.getFinance(), vehicle);
 			}else {
 				System.out.println("Sorry, we don't know what that is...");
 			}

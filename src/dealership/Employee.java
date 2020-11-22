@@ -13,7 +13,7 @@ public class Employee {
 	}
 	
 	public void handleCustomer(Customer customer, boolean finance, Vehicle vehicle) {
-		if(finance) {
+		if(finance == true) {
 			runCreditHistory(customer, vehicle.getPrice() - customer.getBudget());
 		}else if(vehicle.getPrice() <= customer.getBudget()){
 			processTransaction(customer, vehicle);
@@ -34,12 +34,13 @@ public class Employee {
 		
 	}
 	
-	public void runCreditHistory(Customer customer, int amount) {
+	public void runCreditHistory(Customer customer, double d) {
 		System.out.println("Running credit history...");
 	}
 	
 	public void processTransaction(Customer customer, Vehicle vehicle) {
-		
+		System.out.println("Your total is " + vehicle.getPrice());
+		customer.setBudget(customer.getBudget() - vehicle.getPrice());
 	}
 
 }
