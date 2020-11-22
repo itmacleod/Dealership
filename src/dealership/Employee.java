@@ -12,11 +12,13 @@ public class Employee {
 		this.name = name;
 	}
 	
-	public void ringCustomerUp(Vehicle vehicle, double money) {
-		if(money < vehicle.getPrice()) {
-			System.out.println("Sorry, it looks like your card was declined");
+	public void handleCustomer(Customer customer, boolean finance, Vehicle vehicle) {
+		if(finance) {
+			runCreditHistory(customer, vehicle.getPrice() - customer.getBudget());
+		}else if(vehicle.getPrice() <= customer.getBudget()){
+			processTransaction(customer, vehicle);
 		}else {
-			System.out.println("One " + vehicle.getMake() + " " + vehicle.getModel() + " coming right up!");
+			System.out.println("Bring more money...");
 		}
 	}
 	
@@ -29,6 +31,14 @@ public class Employee {
 		for(String key : inventory.keySet()) {
 			System.out.println(key);
 		}
+		
+	}
+	
+	public void runCreditHistory(Customer customer, int amount) {
+		System.out.println("Running credit history...");
+	}
+	
+	public void processTransaction(Customer customer, Vehicle vehicle) {
 		
 	}
 
