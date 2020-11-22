@@ -5,9 +5,9 @@ public class Vehicle {
 	private String make;
 	private String model;
 	private int year;
-	private double price;
+	private int price;
 	
-	public Vehicle(String make, String model, int year, double price) {
+	public Vehicle(String make, String model, int year, int price) {
 		this.make = make;
 		this.model = model;
 		this.year = year;
@@ -42,7 +42,7 @@ public class Vehicle {
 		return price;
 	}
 
-	public void setPrice(double price) {
+	public void setPrice(int price) {
 		this.price = price;
 	}
 

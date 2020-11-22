@@ -16,7 +16,7 @@ public class Employee {
 		if(money < vehicle.getPrice()) {
 			System.out.println("Sorry, it looks like your card was declined");
 		}else {
-			System.out.println("One " + vehicle.getMake() + vehicle.getModel() + "coming right up!");
+			System.out.println("One " + vehicle.getMake() + vehicle.getModel() + " coming right up!");
 		}
 	}
 	
