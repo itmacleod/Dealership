@@ -6,10 +6,9 @@ public class Customer {
 	private String address;
 	private int budget;
 	
-	public Customer(String name, String address, int budget) {
+	public Customer(String name, String address) {
 		this.name = name;
 		this.address = address;
-		this.budget = budget;
 	}
 	
 	/**
@@ -26,6 +25,10 @@ public class Customer {
 	
 	public int getBudget() {
 		return this.budget;
+	}
+	
+	public void setBudget(int budget) {
+		this.budget = budget;
 	}
 
 }

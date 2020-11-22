@@ -16,8 +16,11 @@ public class Main {
 		if(response.equalsIgnoreCase("n")) {
 			System.out.println("Have a good day!");
 		}else {
-			Customer customer1 = new Customer("John", "123 New String Rd", 50000);
+			Customer customer1 = new Customer("John", "123 New String Rd");
 			Employee employee = new Employee("Eric");
+			System.out.println("How much money do you have to spend? ");
+			int money = scan.nextInt();
+			customer1.setBudget(money);
 			System.out.println("Which car would you like to buy? ");
 			employee.showInventory();
 			String response2 = scan.next();
@@ -30,11 +33,15 @@ public class Main {
 				Vehicle vehicle = new Vehicle("Jeep", "Wrangler", 2010, 50000);
 				System.out.println("The Jeep Wrangler, great for offroading!");
 				employee.ringCustomerUp(vehicle, customer1.getBudget());
-			}else {
+			}else if(response2.equalsIgnoreCase("Honda")) {
 				Vehicle vehicle = new Vehicle("Honda", "Civic", 2011, 30000);
 				System.out.println("The Honda Civic, a trusty car!");
 				employee.ringCustomerUp(vehicle, customer1.getBudget());
+			}else {
+				System.out.println("Sorry, we don't know what that is...");
 			}
+			
+			System.out.println("Thanks for shopping with us!");
 		
 			
 			
