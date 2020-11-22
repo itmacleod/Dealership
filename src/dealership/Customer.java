@@ -11,18 +11,6 @@ public class Customer {
 		this.address = address;
 	}
 	
-	/**
-	 * 
-	 * @param vehicle
-	 * @param employee
-	 * @param finance
-	
-	public void purchaseCar(Vehicle vehicle, Employee employee, boolean finance) {
-		
-	}
-	
-	*/
-	
 	public int getBudget() {
 		return this.budget;
 	}
