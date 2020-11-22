@@ -18,6 +18,8 @@ public class Main {
 		}else {
 			Customer customer1 = new Customer("John", "123 New String Rd", 50000.00);
 			Employee employee = new Employee("Eric");
+			System.out.println("Which car would you like to buy? ");
+			employee.showInventory();
 		}
 	
 		
